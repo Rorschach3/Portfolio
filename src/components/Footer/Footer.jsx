@@ -24,7 +24,7 @@ const Footer = () => {
 						<h1>Address:</h1>
 					</Slide>
 					<Slide direction='left'>
-						<p>S.A Sarker road, Shankipara, Mymensingh</p>
+						<p>Anaheim, CA 92806</p>
 					</Slide>
 				</div>
 				<div className='links'>
@@ -36,7 +36,7 @@ const Footer = () => {
 							<FiPhoneCall />
 						</span>
 						<Slide direction='left'>
-							<a href='tel:+8801889633270'>+8801889633270</a>
+							<a href='tel:+714-574-2269'>+714-574-2269</a>
 						</Slide>
 					</div>
 					<div>
@@ -46,8 +46,8 @@ const Footer = () => {
 							</span>
 						</Slide>
 						<Slide>
-							<a href='mailto:mdadilhossain2006@outlook.com'>
-								mdadilhossain2006@outlook.com
+							<a href='mailto:daniel_fhernandez@yahoo.com'>
+								daniel_fhernandez@yahoo.com
 							</a>
 						</Slide>
 					</div>

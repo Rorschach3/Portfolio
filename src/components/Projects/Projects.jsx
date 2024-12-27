@@ -10,11 +10,6 @@ const Projects = () => {
 				<h1>
 					Recent <span className='green'>Projects</span>
 				</h1>
-				<p>
-					Want to hire us? But need quality assurance? Want to clear your doubts
-					before hiring us? Then you can check the recent projects that we
-					worked on.
-				</p>
 			</Zoom>
 			<Slide>
 				<SliderComp />

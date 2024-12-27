@@ -1,165 +1,81 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
 import { GiCompass } from 'react-icons/gi';
 
 const Header = () => {
 	const [bar, setBar] = useState(false);
 	return (
-		<Container bar={bar}>
-			<Logo>
-				<span className='green'>
+		<div className={`flex items-center justify-between max-w-6xl w-4/5 mx-auto py-6 relative ${bar ? 'bg-gray-900' : ''}`}>
+			<div className="flex items-center gap-2">
+				<span className="text-2xl text-green-500">
 					<GiCompass />
 				</span>
-				<h1>Portfolio</h1>
-			</Logo>
-			<Nav bar={bar}>
+				<h1 className="font-semibold text-lg">Portfolio</h1>
+			</div>
+			<div
+				className={`fixed inset-0 flex flex-col bg-green-500 items-center justify-center gap-8 text-2xl font-bold transition-all duration-500 overflow-hidden ${bar ? 'h-screen' : 'h-0'}`}
+			>
 				<span>
-					<a href='#home' onClick={() => setBar(false)}>
+					<a
+						href="#home"
+						onClick={() => setBar(false)}
+						className="text-white hover:opacity-70"
+					>
 						Home
 					</a>
 				</span>
 				<span>
-					<a href='#service' onClick={() => setBar(false)}>
+					<a
+						href="#service"
+						onClick={() => setBar(false)}
+						className="text-white hover:opacity-70"
+					>
 						Services
 					</a>
 				</span>
 				<span>
-					<a href='#project' onClick={() => setBar(false)}>
+					<a
+						href="#project"
+						onClick={() => setBar(false)}
+						className="text-white hover:opacity-70"
+					>
 						Projects
 					</a>
 				</span>
 				<span>
-					<a href='#client' onClick={() => setBar(false)}>
-						Testimonials
+					<a
+						href="#achievement"
+						onClick={() => setBar(false)}
+						className="text-white hover:opacity-70"
+					>
+						Achievements
 					</a>
 				</span>
 				<span>
-					<a href='#footer' onClick={() => setBar(false)}>
-						Portfolio
+					<a
+						href="#footer"
+						onClick={() => setBar(false)}
+						className="text-white hover:opacity-70"
+					>
+						Contact Me
 					</a>
 				</span>
-			</Nav>
-			<div onClick={() => setBar(!bar)} className='bars'>
-				<div className='bar'></div>
 			</div>
-		</Container>
+			<div
+				onClick={() => setBar(!bar)}
+				className="flex items-center justify-center w-10 h-10 relative z-50 cursor-pointer sm:hidden"
+			>
+				<div
+					className={`absolute w-full h-0.5 bg-white transition-all duration-500 ${bar ? 'transform rotate-45' : 'translate-y-2'}`}
+				></div>
+				<div
+					className={`absolute w-full h-0.5 bg-white transition-all duration-500 ${bar ? 'opacity-0' : ''}`}
+				></div>
+				<div
+					className={`absolute w-full h-0.5 bg-white transition-all duration-500 ${bar ? 'transform -rotate-45' : '-translate-y-2'}`}
+				></div>
+			</div>
+		</div>
 	);
 };
 
 export default Header;
-
-const Container = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	max-width: 1280px;
-	width: 80%;
-	margin: 0 auto;
-	padding: 1.5rem 0;
-	position: relative;
-	animation: header 500ms ease-in-out;
-	@media (max-width: 840px) {
-		width: 90%;
-	}
-	.bars {
-		display: none;
-	}
-	@media (max-width: 640px) {
-		.bars {
-			width: 40px;
-			height: 40px;
-			position: relative;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			padding: 0.5rem;
-			z-index: 100;
-			.bar {
-				position: absolute;
-				width: 100%;
-				height: 2px;
-				background-color: ${(props) => (props.bar ? 'transparent' : '#fff')};
-				transition: all 400ms ease-in-out;
-				:before,
-				:after {
-					content: '';
-					width: 100%;
-					height: 2px;
-					background-color: #fff;
-					position: absolute;
-				}
-
-				:before {
-					transform: ${(props) =>
-						props.bar ? 'rotate(45deg)' : 'translateY(10px)'};
-					transition: all 400ms ease-in-out;
-				}
-
-				:after {
-					transform: ${(props) =>
-						props.bar ? 'rotate(-45deg)' : 'translateY(-10px)'};
-					transition: all 400ms ease-in-out;
-				}
-			}
-		}
-	}
-`;
-const Logo = styled.div`
-	display: flex;
-	align-items: center;
-	gap: 0.5rem;
-	span {
-		font-size: 1.8rem;
-	}
-
-	h1 {
-		font-weight: 600;
-		font-size: 1.2rem;
-	}
-`;
-const Nav = styled.div`
-	@media (max-width: 640px) {
-		position: fixed;
-		display: flex;
-		flex-direction: column;
-		background-color: #01be96;
-		inset: 0;
-		justify-content: center;
-		align-items: center;
-		font-size: 2rem;
-		gap: 2rem;
-		font-weight: 700;
-		height: ${(props) => (props.bar ? '100vh' : 0)};
-		transition: height 400ms ease-in-out;
-		overflow: hidden;
-		z-index: 100;
-	}
-	span {
-		margin-left: 1rem;
-		a {
-			color: #fff;
-			text-decoration: none;
-			font-weight: 400;
-			position: relative;
-			:before {
-				content: '';
-				position: absolute;
-				left: 0;
-				right: 0;
-				bottom: -5px;
-				height: 2px;
-				background-color: #fff;
-				transform: scale(0);
-				transform-origin: right;
-				transition: transform 400ms ease-in-out;
-			}
-			:hover:before {
-				transform: scale(1);
-				transform-origin: left;
-			}
-			:hover {
-				opacity: 0.7;
-			}
-		}
-	}
-`;

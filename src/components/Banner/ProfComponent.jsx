@@ -1,12 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { AiOutlineInstagram } from 'react-icons/ai';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { Slide } from 'react-awesome-reveal';
 import { FiPhoneCall } from 'react-icons/fi';
 import { AiFillGithub, AiFillYoutube } from 'react-icons/ai';
 import { BsFacebook } from 'react-icons/bs';
-import { FaFacebookSquare } from 'react-icons/fa';
 
 const ProfComponent = () => {
 	return (
@@ -14,27 +12,26 @@ const ProfComponent = () => {
 			<Slide direction='left'>
 				<Texts>
 					<h4>
-						Hello <span className='green'>I'm</span>
+					 <span className='green'>Hello, I'm</span>
 					</h4>
-					<h1 className='green'>Md Adil Hossain</h1>
-					<h3>Web, Android & IOS App Developer !</h3>
+					<h1 className='green'>Daniel Hernandez</h1>
+					<h3>Software Engineer and Full-Stack Developer.</h3>
 					<p style={{ marginBottom: 30 }}>
-						As a skilled and experienced MERN, Next.js and React Native
-						developer, I'm dedicated to creating top-notch web and mobile
-						applications for clients.
+						As a skilled and experienced developer, I'm dedicated to creating top-notch web and mobile
+						applications for achievements.
 						<br />
 						<br /> With a passion for coding and a deep understanding, I excel
 						in crafting robust and user-friendly solutions tailored to meet
-						client needs. My expertise in MongoDB, Express.js, React.js,
-						Node.js, React Native, and Next.js enables me to deliver efficient,
+						achievement needs. My expertise in MongoDB, Express.js, React.js,
+						Node.js, and Next.js enables me to deliver efficient,
 						scalable, and high-performance applications.
 					</p>
-					<a href='mailto:mdadilhossain2006@outlook.com'>Let's talk</a>
+					<a href='mailto:daniel_fhernandez@yahoo.com'>Contact Me</a>
 					<Social>
 						<h4>Check out my :</h4>
 						<div className='social-icons'>
 							<span>
-								<a href='tel:+8801889633270'>
+								<a href='tel:+7145742269'>
 									<FiPhoneCall />
 								</a>
 							</span>
@@ -49,7 +46,7 @@ const ProfComponent = () => {
 
 							<span>
 								<a
-									href='https://github.com/Adil1109'
+									href='https://github.com/Rorschach3'
 									target='_blank'
 									rel='noreferrer'>
 									<AiFillGithub />
@@ -58,34 +55,18 @@ const ProfComponent = () => {
 
 							<span>
 								<a
-									href='https://www.youtube.com/@programmingwithadil'
+									href='https://www.linkedin.com/in/Fernando00714'
 									target='_blank'
 									rel='noreferrer'>
 									<AiFillYoutube />
 								</a>
 							</span>
 							<span>
-								<a href='www.linkedin.com/in/md-adil-hossain' target='_blank'>
+								<a href='https://www.linkedin.com/in/Fernando00714'>
 									<FaLinkedinIn />
 								</a>
 							</span>
-							<span>
-								<a
-									href='https://www.facebook.com/md.adil.hossain.yt'
-									target='_blank'
-									rel='noreferrer'>
-									<FaFacebookSquare />
-								</a>
-							</span>
 
-							<span>
-								<a
-									href='https://www.instagram.com/adil.s_profile/'
-									target='_blank'
-									rel='noreferrer'>
-									<AiOutlineInstagram />
-								</a>
-							</span>
 						</div>
 					</Social>
 				</Texts>
@@ -93,7 +74,7 @@ const ProfComponent = () => {
 			<Slide direction='right'>
 				<Profile>
 					<img
-						src='profileImage.jpg'
+						src='ProfilePic.jpg'
 						alt='profile'
 						style={{ borderRadius: '50%' }}
 					/>

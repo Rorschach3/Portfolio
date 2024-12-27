@@ -1,48 +1,37 @@
 import React, { useRef } from 'react';
 import Slider from 'react-slick';
 import styled from 'styled-components';
-import ClientSlider from './ClientSlider';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import { Slide } from 'react-awesome-reveal';
 
-let clients = [
+// Placeholder data for certificates
+let certificates = [
 	{
-		name: 'Tariq Mahmud',
-		position: 'App Developer',
-		img_url: 'avatar.jpg',
-		stars: 5,
-		disc: `Adil is a great developer. He worked with me in a react native application when i had some personal issues and a project deadline at the same time. I believe He finished the project for me and that was awesome! He will surely do something extraordinary in the development field.`,
+		type: 'PDF',
+		file: 'PM_Accelerate.pdf',
 	},
 	{
-		name: 'Shakib Hayath Maruf',
-		position: 'Youtuber, Cinemon',
-		img_url: 'avatar.jpg',
-		stars: 5,
-		disc: `In my experience working with Md Adil Hossain, I have witnessed the exceptional talent and skill they possess as a software developer. His dedication, attention to detail, and ability to think critically have consistently impressed me. His work on the "Muvimama" app showcases his exceptional ability to create intuitive and user-friendly solutions.`,
+		type: 'Image',
+		file: 'Hack_Reactor.png',
 	},
 	{
-		name: 'Abir Hasan',
-		position: 'Web Developer',
-		img_url: 'avatar.jpg',
-		stars: 5,
-		disc: `Adil is prominent in Next.js and other technologies. My client wanted a Next.js App. But I am a php dev.So, I asked Adil to handle the project and he did that so efficiently that my client was pleased.`,
+		type: 'PDF',
+		file: 'Prompt_Injection.pdf',
 	},
 	{
-		name: 'Jahidul Islam',
-		position: 'Proffesor, Notre Dame College, Mymensingh',
-		img_url: 'avatar.jpg',
-		stars: 5,
-		disc: `Adil's coding manner is magnificent which i think, will be elevated day by day and he'll do extensive progress!`,
+		type: 'Image',
+		file: '.png',
 	},
 ];
+
 var settings = {
 	dots: true,
 	infinite: true,
-	speed: 500,
-	slidesToShow: 3,
+	speed: 800,
+	slidesToShow: 6,
 	slidesToScroll: 1,
 	initialSlide: 0,
-	arrows: false,
+	arrows: true,
 	responsive: [
 		{
 			breakpoint: 990,
@@ -71,19 +60,35 @@ var settings = {
 	],
 };
 
-const Clients = () => {
+const Certificates = () => {
 	const arrowRef = useRef(null);
-	let clientDisc = '';
-	clientDisc = clients.map((item, i) => <ClientSlider item={item} key={i} />);
+
+	let certificateDisplay = certificates.map((item, i) => (
+		<div key={i}>
+			{item.type === 'PDF' ? (
+				<object
+					data={item.file}
+					type="application/pdf"
+					width="100%"
+					height="200px"
+				>
+					<p>Your browser does not support displaying PDFs. <a href={item.file}>Download the file.</a></p>
+				</object>
+			) : (
+				<img src={item.file} alt="Certificate Placeholder" width="100%" height="200px" />
+			)}
+		</div>
+	));
+
 	return (
-		<Container id='client'>
+		<Container id='certificates'>
 			<Slide direction='left'>
-				<span className='green'>testimonials</span>
-				<h1>what clients say</h1>
+				<span className='green'>Achievements</span>
+				<h1>Completed Courses and Certifications</h1>
 			</Slide>
-			<Testimonials>
+			<CertificatesDisplay>
 				<Slider ref={arrowRef} {...settings}>
-					{clientDisc}
+					{certificateDisplay}
 				</Slider>
 				<Buttons>
 					<button onClick={() => arrowRef.current.slickPrev()}>
@@ -93,12 +98,12 @@ const Clients = () => {
 						<IoIosArrowForward />
 					</button>
 				</Buttons>
-			</Testimonials>
+			</CertificatesDisplay>
 		</Container>
 	);
 };
 
-export default Clients;
+export default Certificates;
 
 const Container = styled.div`
 	width: 80%;
@@ -159,7 +164,7 @@ const Container = styled.div`
 	}
 `;
 
-const Testimonials = styled.div`
+const CertificatesDisplay = styled.div`
 	margin-top: 2rem;
 	position: relative;
 `;

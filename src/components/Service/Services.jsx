@@ -1,7 +1,6 @@
 import React from 'react';
-import { MdDesignServices } from 'react-icons/md';
-import { GiWorld } from 'react-icons/gi';
-import { SiAndroidstudio } from 'react-icons/si';
+import { RiCodeView } from 'react-icons/ri';
+import { TiDeviceDesktop } from 'react-icons/ti';
 import styled from 'styled-components';
 import Card from './Card';
 import { Slide } from 'react-awesome-reveal';
@@ -11,30 +10,22 @@ const Services = () => {
 		<Container id='service'>
 			<Slide direction='down'>
 				<h4>
-					Our <span className='green'>services</span>
+					<span className='green'>My services</span>
 				</h4>
-				<h1>What we Do</h1>
 			</Slide>
 			<Cards>
 				<Slide direction='left'>
 					<Card
-						Icon={MdDesignServices}
-						title={'Ui/Ux Designer'}
-						desc={`We will be creating beautiful and eye catchy ui/ux or web designs for your next projects. We also offer logo and thumbnail designed for you.`}
+						Icon={TiDeviceDesktop}
+						title={'Software Engineer'}
+						desc={`I am a skilled software developer specializing in custom software, web development, API integration, and database optimization. With expertise in modern frameworks like React, Next.js, and Express.js, I deliver scalable, user-friendly solutions tailored to your needs.`}
 					/>
 				</Slide>
 				<Slide direction='up'>
 					<Card
-						Icon={GiWorld}
+						Icon={RiCodeView}
 						title={'Web Developer'}
-						desc={`Want a single page website built with React or a SSR/SSG Nextjs site? We'll will be creating exactly what you wish!`}
-					/>
-				</Slide>
-				<Slide direction='right'>
-					<Card
-						Icon={SiAndroidstudio}
-						title={'Android/IOS App Developer'}
-						desc={`We will be creating super performent, cross-platform apps for Android and IOS with React Native for your business to grow up next level. `}
+						desc={`Specializing in building modern, responsive websites and applications. Using React, JavaScript, and TypeScript, I craft intuitive, enterprise-level UI/UX experiences. I utilize Tailwind CSS for sleek, efficient designs and integrate databases like MongoDB and MySQL to create powerful, data-driven solutions.`}
 					/>
 				</Slide>
 			</Cards>

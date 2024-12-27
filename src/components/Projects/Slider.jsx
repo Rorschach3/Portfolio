@@ -6,29 +6,24 @@ import styled from 'styled-components';
 
 let data = [
 	{
-		img: './Social.jpg',
-		disc: 'This is a fully functional social media app api built with node and express.js. It has almost every major feature that a social media should have like posting, liking, commenting, profile and cover picture uploading, sending emails, resetting password, changing password, encryption and many other features!',
-		link: 'https://github.com/Adil1109/socialMediaAPI',
+		img: './brandboost.png',
+		disc: 'Elevate your social media brand with our AI-powered platform. Expand your reach, boost engagement rates, and maintain a positive sentiment effortlessly.',
+		link: 'https://github.com/BrandBoost-Ai/Brandboost-Ai',
 	},
 	{
-		img: 'Movies.jpg',
-		disc: 'This is a fully functional Movie streaming app built with React Native. It has features like streaming movies from different websites and also streaming youtube videos and you can browse them also.',
-		link: 'https://github.com/Adil1109/streamingAppExpoCLI',
+		img: './weatherApp.png',
+		disc: 'A basic Weather App created with two Python-based frameworks, Tkinter and Flask. This app uses OpenWeatherMap.org for retrieving real-time weather data based on user input.',
+		link: 'https://github.com/Rorschach3/weather_app',
 	},
 	{
-		img: 'blog.jpg',
-		disc: 'This is a fully functional blogging website built with Next.js. write blogs and place them to search results. Attach images and present your blog beautifully to the world. Almost every feature of it contains that a blogging website should have and developed with mighty next.js codebase',
-		link: 'https://github.com/Adil1109/nextjsSEOBlog',
+		img: './beautySalon.png',
+		disc: "A mock beauty salon website designed for easy appointment scheduling and showing the salon's location online.",
+		link: 'https://github.com/Rorschach3/beauty-Salon',
 	},
 	{
-		img: 'Admin.jpg',
-		disc: 'Secured Admin panel for content management of an android application and this is built with React.js!',
-		link: 'https://github.com/Adil1109/contentAdminPanel',
-	},
-	{
-		img: 'Api.jpg',
-		disc: 'API for a streaming application built with Node.js, express and mongodb. It includes features that powers a movie and web series streaming and browsing app from different sites and youtube!',
-		link: 'https://github.com/Adil1109/streamingAppBackendAPI',
+		img: './projectBeta.png',
+		disc: "CarCar, an application for managing aspects of an automobile dealership—specifically its inventory, service center, and sales.",
+		link: 'https://github.com/Rorschach3/Project-Beta',
 	},
 ];
 
